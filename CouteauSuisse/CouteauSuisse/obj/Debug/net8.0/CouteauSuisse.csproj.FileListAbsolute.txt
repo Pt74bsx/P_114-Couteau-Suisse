@@ -1,0 +1,15 @@
+C:\Users\pt74bsx\Documents\GitHub\P_114-Couteau-Suisse\CouteauSuisse\CouteauSuisse\bin\Debug\net8.0\CouteauSuisse.exe
+C:\Users\pt74bsx\Documents\GitHub\P_114-Couteau-Suisse\CouteauSuisse\CouteauSuisse\bin\Debug\net8.0\CouteauSuisse.deps.json
+C:\Users\pt74bsx\Documents\GitHub\P_114-Couteau-Suisse\CouteauSuisse\CouteauSuisse\bin\Debug\net8.0\CouteauSuisse.runtimeconfig.json
+C:\Users\pt74bsx\Documents\GitHub\P_114-Couteau-Suisse\CouteauSuisse\CouteauSuisse\bin\Debug\net8.0\CouteauSuisse.dll
+C:\Users\pt74bsx\Documents\GitHub\P_114-Couteau-Suisse\CouteauSuisse\CouteauSuisse\bin\Debug\net8.0\CouteauSuisse.pdb
+C:\Users\pt74bsx\Documents\GitHub\P_114-Couteau-Suisse\CouteauSuisse\CouteauSuisse\obj\Debug\net8.0\CouteauSuisse.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pt74bsx\Documents\GitHub\P_114-Couteau-Suisse\CouteauSuisse\CouteauSuisse\obj\Debug\net8.0\CouteauSuisse.AssemblyInfoInputs.cache
+C:\Users\pt74bsx\Documents\GitHub\P_114-Couteau-Suisse\CouteauSuisse\CouteauSuisse\obj\Debug\net8.0\CouteauSuisse.AssemblyInfo.cs
+C:\Users\pt74bsx\Documents\GitHub\P_114-Couteau-Suisse\CouteauSuisse\CouteauSuisse\obj\Debug\net8.0\CouteauSuisse.csproj.CoreCompileInputs.cache
+C:\Users\pt74bsx\Documents\GitHub\P_114-Couteau-Suisse\CouteauSuisse\CouteauSuisse\obj\Debug\net8.0\CouteauSuisse.sourcelink.json
+C:\Users\pt74bsx\Documents\GitHub\P_114-Couteau-Suisse\CouteauSuisse\CouteauSuisse\obj\Debug\net8.0\CouteauSuisse.dll
+C:\Users\pt74bsx\Documents\GitHub\P_114-Couteau-Suisse\CouteauSuisse\CouteauSuisse\obj\Debug\net8.0\refint\CouteauSuisse.dll
+C:\Users\pt74bsx\Documents\GitHub\P_114-Couteau-Suisse\CouteauSuisse\CouteauSuisse\obj\Debug\net8.0\CouteauSuisse.pdb
+C:\Users\pt74bsx\Documents\GitHub\P_114-Couteau-Suisse\CouteauSuisse\CouteauSuisse\obj\Debug\net8.0\CouteauSuisse.genruntimeconfig.cache
+C:\Users\pt74bsx\Documents\GitHub\P_114-Couteau-Suisse\CouteauSuisse\CouteauSuisse\obj\Debug\net8.0\ref\CouteauSuisse.dll
