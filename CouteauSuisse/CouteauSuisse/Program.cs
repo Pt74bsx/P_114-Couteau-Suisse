@@ -74,7 +74,8 @@ namespace EasyPasswords_Augusto
                 Console.Clear();
 
                 // ── Message d'accueil
-                Console.WriteLine("Le Couteau Suisse est un programme console qui sert d'outils. Il possède plusieurs outils comme un couteau Suisse.\n" +
+                Console.WriteLine("========== Bienvenue - Couteau Suisse ==========");
+                Console.WriteLine("Le Couteau Suisse est un programme console qui sert d'outils. \nIl possède plusieurs outils comme un couteau Suisse.\n" +
                     "Ces outils sont principalement accée sur le chiffrement, morse, etc.\n");
 
                 // ── Menu d'accueil
