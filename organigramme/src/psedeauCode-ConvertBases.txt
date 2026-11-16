@@ -1,0 +1,8 @@
+Switch --> Selon le choix --> Appelle la méthode avec options choisi 
+								     
+Switch de l'option choisi --> Demande la valeur --> Vérifie qu'il y a une valeur et quelle soit dans le bon format --> Calcule la valeur --> Affiche la valeur 
+
+Si une erreur dans la saisie --> demande à nouveau (boucle jusqu'à que ca soit valide)
+
+Une fois résultat afficher -> message qui dit d'appuyer sur une touche pour retourner au menu d'accueil --> Console.ReadKey(); --> Retour à l'accueil 
+								     
