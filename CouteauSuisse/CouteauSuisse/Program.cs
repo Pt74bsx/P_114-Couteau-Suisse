@@ -22,14 +22,14 @@
 ******************************************************************************/
 
 /******************************************************************************
+** NOTIONS DE BASE                                                           **
+**                                                                           **
 ** Qu'est-ce que le code Morse ?                                             **
-**                                                                           **     
-**                            	                                             **
+** Le Morse est un système qui utilise des points et des tirets pour         **
+** représenter des lettres et des chiffres.                                  **
 **                                                                           **
 ** Pourquoi coder l'information ?                                            **
-**                                                                           **
-**                                                                           **
-**                                                                           **
+** Pour représenter et transmettre des informations sous une autre forme     **
 ******************************************************************************/
 
 namespace EasyPasswords_Augusto
