@@ -21,6 +21,17 @@
 **                                                                           **
 ******************************************************************************/
 
+/******************************************************************************
+** Qu'est-ce que le code Morse ?                                             **
+**                                                                           **     
+**                            	                                             **
+**                                                                           **
+** Pourquoi coder l'information ?                                            **
+**                                                                           **
+**                                                                           **
+**                                                                           **
+******************************************************************************/
+
 namespace EasyPasswords_Augusto
 {
     internal class Program
@@ -51,14 +62,20 @@ namespace EasyPasswords_Augusto
             Console.Title = "Couteau Suisse";
 
             // ── Déclaration des variables 
-            bool run = true;
+            bool isRun = true;
 
             // ── Programme
-            while (run)
+            while (isRun)
             {
                 // ── Déclaration des variables qui doivent se rénitialiser 
-                bool valide = false;
-                int choice = -1;
+                bool isValide = false;
+                int intChoice = -1;
+
+                Console.Clear();
+
+                // ── Message d'accueil
+                Console.WriteLine("Le Couteau Suisse est un programme console qui sert d'outils. Il possède plusieurs outils comme un couteau Suisse.\n" +
+                    "Ces outils sont principalement accée sur le chiffrement, morse, etc.\n");
 
                 // ── Menu d'accueil
                 Console.WriteLine("=== Couteau Suisse ===");
@@ -69,17 +86,17 @@ namespace EasyPasswords_Augusto
                 Console.WriteLine("0. Quitter");
 
                 // ── Tant que l'entrée n'est pas valide, le choix est de nouveau demandé
-                while (!valide)
+                while (!isValide)
                 {
                     Console.Write("\nVotre choix : ");
                     string inputChoice = Console.ReadLine();
 
-                    bool isNumber = int.TryParse(inputChoice, out choice);
+                    bool isNumber = int.TryParse(inputChoice, out intChoice);
 
                     // Si c'est un nombre et que ce nombre est entre 0 et 4 (compris)
-                    if (isNumber && choice >= 0 && choice <= 4)
+                    if (isNumber && intChoice >= 0 && intChoice <= 4)
                     {
-                        valide = true;
+                        isValide = true;
                     }
                     else
                     {
@@ -90,21 +107,22 @@ namespace EasyPasswords_Augusto
                 }
 
                 // ── Redirection des choix
-                switch (choice)
+                switch (intChoice)
                 {
                     // ── Quitter
                     case 0:
                         Console.WriteLine("\nMerci d'avoir utilisé le Couteau Suisse !");
-                        run = false;
+                        isRun = false;
                         break;
 
                     // ── Texte -> Morse
                     case 1:
-                        ConvertTextToMorse(choice);
+                        ConvertTextToMorse();
                         break;
 
                     // ── Morse -> Texte
                     case 2:
+                        ConvertMorseToText();
                         break;
 
                     // ── A venir 
@@ -124,18 +142,14 @@ namespace EasyPasswords_Augusto
             } 
         }
 
-        /// <summary>
-        /// Permet de convertir un texte en Morse
-        /// </summary>
-        /// <param name="choice"></param>
-        static void ConvertTextToMorse(int choice)
+        static void ConvertTextToMorse()
         {
             string strInputText = "";
             string strResult = "";
-            bool valide = false;
+            bool isValide = false;
 
             // ── Tant que l'entrée n'est pas correct on re demande 
-            while (!valide)
+            while (!isValide)
             {
                 Console.WriteLine("\n=== Texte -> Morse ===");
                 Console.Write("Entrez un texte (lettres A-Z, chiffres) : ");
@@ -150,7 +164,7 @@ namespace EasyPasswords_Augusto
                 }
                 else
                 {
-                    valide = true;
+                    isValide = true;
                 }
             }
 
@@ -179,6 +193,87 @@ namespace EasyPasswords_Augusto
 
             // ── Affichage de la convertion
             Console.WriteLine("\nRésultat en Morse : " + strResult);
+
+            Console.Write("\nAppuyez sur une touche pour retourner au menu ...\n\n");
+            Console.ReadKey(true);
+        }
+
+        static void ConvertMorseToText()
+        {
+            string strInputText = "";
+            string strResult = "";
+            bool isValide = false;
+
+            // ── Tant que l'entrée n'est pas correct on re demande 
+            while (!isValide)
+            {
+                Console.WriteLine("\n=== Morse -> Texte ===");
+                Console.Write("Entrez du Morse : ");
+                strInputText = Console.ReadLine();
+
+                // ── Si l'entrée est vide
+                if (String.IsNullOrWhiteSpace(strInputText))
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("\n[ERREUR] L'entrée ne doit pas être vide");
+                    Console.ResetColor();
+                }
+                else
+                {
+                    isValide = true;
+
+                    foreach(char caractere in strInputText)
+                    {
+                        if (caractere != '.' && caractere != '-' && caractere != ' ' && caractere != '/')
+                        {
+                            isValide = false;
+                        }
+                    }
+
+                    if (isValide == false)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("\n[ERREUR] Morse invalide");
+                        Console.ResetColor();
+                    }
+                }
+            }
+
+            // ── Séparer le Morse
+            string[] codes = strInputText.Split(' ');
+
+            // ── Parcours chaque caractère
+            foreach (string strCode in codes)
+            {
+                if (strCode == "/")
+                {
+                    strResult = strResult + " ";
+                }
+                else if (strCode != "")
+                {
+                    bool isFind = false;
+
+                    foreach(char charLetter in morse.Keys)
+                    {
+                        if (morse[charLetter] == strCode)
+                        {
+                            strResult = strResult + charLetter;
+                            isFind = true;
+                        }
+                    }
+
+                    if (isFind == false)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.WriteLine("\n[AVERTISSEMENT] Code Morse inconnu : " + strCode);
+                        Console.ResetColor();
+                        Console.WriteLine();
+                    }
+                }
+            }
+
+            // ── Affichage de la convertion
+            Console.WriteLine("\nRésultat en texte : " + strResult);
 
             Console.Write("\nAppuyez sur une touche pour retourner au menu ...\n\n");
             Console.ReadKey(true);
